@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Hi, You are interested in my code huh? :-)
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maduranga | Portfolio | Under Maintenance</title>
     <style>
+      :root {
+        --vh: 1vh;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -13,7 +19,7 @@
 
       body {
         font-family: "Arial", sans-serif;
-        height: 100vh;
+        min-height: calc(var(--vh, 1vh) * 100);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,16 +60,10 @@
         text-decoration: underline;
       }
 
-      .clipart {
-        /* margin-bottom: 20px; */
-      }
-
       .clipart img {
         width: 250px;
-        /* background: red; */
       }
 
-      /* Media Queries for responsiveness */
       @media (max-width: 768px) {
         .container {
           padding: 30px;
@@ -100,8 +100,23 @@
         }
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateVh() {
+          document.documentElement.style.setProperty(
+            "--vh",
+            `${window.innerHeight / 100}px`
+          );
+        }
+        window.addEventListener("resize", updateVh);
+        updateVh();
+      });
+    </script>
   </head>
   <body>
+    <!--
+      Hi, You are interested in my code huh? :-)
+    -->
     <div class="container">
       <div class="clipart">
         <img src="./Maintenance.png" alt="Under Maintenance" />
